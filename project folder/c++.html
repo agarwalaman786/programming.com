@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="c++.css">
+	<title>programming.com</title>
+</head>
+<body>
+	<header>
+	<ul id="head1">
+		<li><a id="a1" href="geeks.html">Home</a></li>
+		<li><a id="a1" href="c.html">C</a></li>
+		<li><a id="a1" href="c++.html">C++</a></li>
+		<li><a id="a1" href="#">Java</a></li>
+		<li><a id="a1" href="#">Python</a></li>
+		<li><a id="a1" href="#">PHP</a></li>
+		<li><a id="a1" href="#">Theory</a></li>
+		<li><a id="a1" href="videos.html">videos</a></li>
+		<li><a id="a1" href="#">Login</a></li>
+		<li><a id="a1" href="#">Signup</a></li>
+	</ul>
+</header>
+<div id="locator"><p id="p1">C++ is a middle-level programming language developed by Bjarne Stroustrup starting in 1979 at Bell Labs. C++ runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX. This tutorial adopts a simple and practical approach to describe the concepts of C++.C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural, object-oriented, and generic programming.<br>C++ is regarded as a middle-level language, as it comprises a combination of both high-level and low-level language features.<br>C++ was developed by Bjarne Stroustrup starting in 1979 at Bell Labs in Murray Hill, New Jersey, as an enhancement to the C language and originally named C with Classes but later it was renamed C++ in 1983.<br>C++ is a superset of C, and that virtually any legal C program is a legal C++ program.<br><br>Note:A programming language is said to use static typing when type checking is performed during compile-time as opposed to run-time.</p>
+<h3 id="p2">Object-Oriented Programming</h3>
+<p id="p3">C++ fully supports object-oriented programming, including the four pillars of object-oriented development:<br><br>1.Encapsulation<br>
+2.Data hiding<br>
+3.Inheritance<br>
+4.Polymorphism</p>
+<h3 id="p4">Standard Libraries<h3>
+<p id="p5">Standard C++ consists of three important parts:<br>
+1.The core language giving all the building blocks including variables, data types and literals, etc.<br>
+2.The C++ Standard Library giving a rich set of functions manipulating files, strings, etc.<br>
+3.The Standard Template Library (STL) giving a rich set of methods manipulating data structures, etc.<br>
+</p>
+<h3 id="p6">The ANSI Standard</h3>
+<p id="p7">The ANSI standard is an attempt to ensure that C++ is portable; that code you write for Microsoft's compiler will compile without errors, using a compiler on a Mac, UNIX, a Windows box, or an Alpha.<br>The ANSI standard has been stable for a while, and all the major C++ compiler manufacturers support the ANSI standard.</p>
+<h3 id="p8">Use of C++</h3>
+<p id="p9">C++ is used by hundreds of thousands of programmers in essentially every application domain.<br><br>C++ is being highly used to write device drivers and other software that rely on direct manipulation of hardware under realtime constraints.<br><br>C++ is widely used for teaching and research because it is clean enough for successful teaching of basic concepts.<br><br>Anyone who has used either an Apple Macintosh or a PC running Windows has indirectly used C++ because the primary user interfaces of these systems are written in C++.
+</p>
+<h3 id="p10">Local Environment Setup</h3>
+<p id="p11">If you are still willing to set up your environment for C++, you need to have the following two softwares on your computer.</p>
+<h3 id="p12">C++ Basic:</h3>
+<p id="p13">When we consider a C++ program, it can be defined as a collection of objects that communicate via invoking each other's methods. Let us now briefly look into what a class, object, methods, and instant variables mean.
+</p>
+<h3 id="p14">Object:</h3>
+<p id="p15">Objects have states and behaviors. Example: A dog has states - color, name, breed as well as behaviors - wagging, barking, eating. An object is an instance of a class.</p>
+<h3 id="p16">Class:</h3>
+<p id="p17">A class can be defined as a template/blueprint that describes the behaviors/states that object of its type support.</p>
+<h3 id="p18">Methods:</h3>
+<p id="p19"> A method is basically a behavior. A class can contain many methods. It is in methods where the logics are written, data is manipulated and all the actions are executed.</p>
+<h3 id="p20">Instance Variables:</h3>
+<p id="p21">Each object has its unique set of instance variables. An object's state is created by the values assigned to these instance variables.</p>
+<h3 id="p22">C++ Program Structure:</h3>
+<p id="p23">Let us look at a simple code that would print the words Hello World.<br>#include ''iostream''<br>
+using namespace std;<br>// main() is where program execution begins.<br>int main() {<br>cout << "Hello World"; // prints Hello World<br>return 0;}<br><br><span id="p24">Let us look at the various parts of the above program:<br><br>
+1.The C++ language defines several headers, which contain information that is either necessary or useful to your program. For this program, the header <span style="color:white">''iostream''</span>is needed.<br><br>
+2.The line <span style="color:white">using namespace std;</span>tells the compiler to use the std namespace. Namespaces are a relatively recent addition to C++.<br><br>
+3.The next <span style="color: white">line '// main()</span>is where program execution begins.' is a single-line comment available in C++. Single-line comments begin with // and stop at the end of the line.<br><br>
+4.The line <span style="color:white">int main()</span> is the main function where program execution begins.<br><br>
+5.The next line <span style="color:white">cout << "Hello World";</span> causes the message "Hello World" to be displayed on the screen.<br><br>
+6.The next line <span style="color:white">return 0;</span> terminates main( )function and causes it to return the value 0 to the calling process.</span>
+</p>
+<p id="p25"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<h3 id="p26">Compile and Execute C++ Program:</h3>
+<p id="p27">Let's look at how to save the file, compile and run the program. Please follow the steps given below:<br><br>
+1.Open a text editor and add the code as above.<br><br>
+2.Save the file as: hello.cpp<br><br>
+3.Open a command prompt and go to the directory where you saved the file.<br><br>
+4.Type 'g++ hello.cpp' and press enter to compile your code. If there are no errors in your code the command prompt will take you to the next line and would generate a.out executable file.<br><br>
+5.Now, type 'a.out' to run your program.<br><br>
+6.You will be able to see ' Hello World ' printed on the window.<br><br>
+<span id="p28">$ g++ hello.cpp<br>
+$ ./a.out<br>
+Hello World<br></span>
+</p>
+<p id="p29">Make sure that g++ is in your path and that you are running it in the directory containing file hello.cpp.</p>
+</div>
+<ul id="head2" >
+		<li><a id="a2" href=c.html>C++ Home</a></li>
+		<hr>
+		<li><a id="a2" href="c.html">C++ Overview</a></li>
+		<hr>
+		<li><a id="a2" href="c.html">C++ Environment Setup</a></li>
+		<hr>
+		<li><a id="a2" href="c.html">C++ Basic Syntax</a></li>
+		<hr>
+		<li><a id="a2" href="#">C++ Comments</a></li>
+		<hr>
+		<li><a id="a2" href="#">C++ Data Types</a></li>
+		<hr>
+		<li><a id="a2" href="#">C++ Variable Types</a>
+		<hr>
+		<li><a id="a2" href="#">C++ Variable Scope</a>
+		<hr>
+		<li><a id="a2" href="#">C++ Constants/Literals</a></li>
+		<hr>
+        <li><a id="a2" href="#">C++ Modifier Types</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Storage Classes</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Operators</a></li>
+        <hr>       
+        <li><a id="a2" href="#">C++ Loop Types</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Decision Making</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Functions</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Numbers</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Numbers</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Arrays</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Strings</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Pointers</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ References</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Date & Time</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Basic Input/Output</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Data Structures</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Object Oriented</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Classes & Objects</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Inheritance</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Overloading</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Polymorphism</a></li>
+        <hr>
+        <li><a id="a2" href="#"> C++ Abstraction</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Encapsulation</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Interfaces</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Advanced</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Files and Streams</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Exception Handling</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Dynamic Memory</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Namespaces</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Templates</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Preprocessor</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Signal Handling</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Multithreading</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Web Programming</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Useful Resources</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Object Oriented</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ STL Tutorial</a></li>
+        <hr>
+        <li><a id="a2" href="#">C++ Standard Library</a></li>
+        <hr>
+	</ul>
+</body>
+</html>

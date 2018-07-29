@@ -1,0 +1,91 @@
+header{
+	margin: 0px;
+	background-color:black;
+	color: white; 
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+}
+body{
+	margin: 0px;
+}
+header h1
+{
+	margin: 0px;
+		text-shadow: 2px 3px 5px silver;
+	font-family: 'Krona One', sans-serif;
+	font-weight: 10px;
+
+}
+ header #head1 {
+	text-decoration: none;
+	display: inline;
+	font-family: 'Oswald', sans-serif;
+
+}
+ul li {text-decoration: none;
+	display: inline;
+}
+ul li a{
+	display: inline-block;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 30px;
+	color: white;
+	font-weight: 20px;
+}
+ #log{
+	font-weight: 10px;
+}
+a:link{
+	color: red;
+}
+a:visited{
+	color:  blue;
+}
+a:hover{
+	color: gold;
+}
+h1{
+	text-shadow: 2px 4px 3px white;
+	font-weight:bold;
+}
+h6{
+	font-size: 23px;
+	color:black;
+	text-shadow:3px 3px 4px silver; 
+	text-align:justify;
+	text-justify: inter-word;
+}
+h5{
+	text-align: center;
+	font-family: 'Shadows Into Light', cursive;
+	text-shadow:3px 3px 4px skyblue;
+	font-weight:bold;
+	font-size: 40px;  
+}
+body,.driver{
+	background-image:url('program.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
+	margin: 0px;
+}
+.h1{
+	font-size:17px;
+	text-shadow:3px 3px 4px silver;
+}
+.h2{
+	margin:0px;
+	font-size:17px;
+	text-shadow:3px 3px 4px silver;
+}
+h4{
+	margin:0px 0% 0px 35%; 
+	margin-bottom:2%;
+	margin-top:1%;  
+	padding-bottom:4px;
+	font-size:20px;
+	text-shadow:3px 3px 4px silver;
+		font-family: 'Oswald', sans-serif;
+		background-color: rgba(0,0,0,0.4);
+		display: inline-block;
+}

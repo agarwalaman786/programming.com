@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>programming.com</title>
+	<link rel="stylesheet" type="text/css" href="c.css">
+<body>
+<header>
+	<ul id="head1">
+		<li><a id="a1" href="geeks.html">Home</a></li>
+		<li><a id="a1" href="c.html">C</a></li>
+		<li><a id="a1" href="c++.html">C++</a></li>
+		<li><a id="a1" href="#">Java</a></li>
+		<li><a id="a1" href="#">Python</a></li>
+		<li><a id="a1" href="#">PHP</a></li>
+		<li><a id="a1" href="#">Theory</a></li>
+		<li><a id="a1" href="#">videos</a></li>
+		<li><a id="a1" href="#">Login</a></li>
+		<li><a id="a1" href="#">Signup</a></li>
+	</ul>
+</header>
+<div id="locator">
+	<h3>C Language Introduction</h3>
+	<p>C is a procedural programming language. It was initially developed by Dennis Ritchie between 1969 and 1973. It was mainly developed as a system programming language to write operating system. The main features of C language include low-level access to memory, simple set of keywords, and clean style, these features make C language suitable for system programming like operating system or compiler development.
+Many later languages have borrowed syntax/features directly or indirectly from C language. Like syntax of Java, PHP, JavaScript and many other languages is mainly based on C language. C++ is nearly a superset of C language (There are few programs that may compile in C, but not in C++).
+</p>
+<h3 id="h2">Windows:</h3>
+<p id="p1">There are many compilers available freely for compilation of C programs like Code Blocks  and Dev-CPP.   We strongly recommend Code Blocks.
+</p>
+<h3 id="h3">Writing first program:</h3>
+<p id="p2">
+#include "stdio.h"</p>
+<p id="p3">
+int main(void)</p>
+<p id="p4">
+{</p>
+<p id="p5">printf("Programming");</p>
+<p id="p6">return 0;</p>
+<p id="p7">}</p>
+<p id="p8"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p9">Output:</p>
+<p id="p10">Programming</p>
+<p id="p11">Let us analyze the program line by line.</p>
+<h1 id="p12">Line 1: [ #include <stdio.h> ]:</stdio.h></h1>
+<p id="p13">In a C program, all lines that start with # are processed by preprocessor which is a program invoked by the compiler. In a very basic term, preprocessor takes a C program and produces another C program. The produced program has no lines starting with #, all such lines are processed by the preprocessor. In the above example, preprocessor copies the preprocessed code of stdio.h to our file. The .h files are called header files in C. These header files generally contain declaration of functions. We need stdio.h for the function printf() used in the program.</p>
+<h1 id="p14">Line 2 [ int main(void) ]</h1>
+<p id="p15"> There must to be starting point from where execution of compiled C program begins. In C, the execution typically begins with first line of main(). The void written in brackets indicates that the main doesn’t take any parameter (See this for more details). main() can be written to take parameters also. We will be covering that in future posts.
+The int written before main indicates return type of main(). The value returned by main indicates status of program termination. See this post for more details on return type.
+</p>
+<h3 id="p16">Line 3 and 6: [ { and } ]</h3>
+<p id="p17">In C language, a pair of curly brackets define a scope and mainly used in functions and control statements like if, else, loops. All functions must start and end with curly brackets.</p>
+<h3 id="p18">Line 4 [ printf(''Programming''); ]</h3>
+<p id="p19"> printf() is a standard library function to print something on standard output. The semicolon at the end of printf indicates line termination. In C, semicolon is always used to indicate end of statement.</p>
+<h3 id="p20">Line 5 [ return 0; ]</h3>
+<p id="p21">The return statement returns the value from main(). The returned value may be used by operating system to know termination status of your program. The value 0 typically means successful termination.</p>
+<h3 id="p22">C Programming Language Standard</h3>
+<p id="p23">The idea of this article is to introduce C standard.</p>
+<h3 id="p24">What to do when a C program produces different results in two different compilers?</h3>
+<p id="p25">For example, consider the following simple C program.</p>
+<p id="p26">void main() {  }</p>
+<p id="p27"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p28">The above program fails in gcc as the return type of main is void, but it compiles in Turbo C. How do we decide whether it is a legitimate C program or not?<br>Consider the following program as another example. It produces different results in different compilers.<br>#include ''stdio.h''<br>int main()<br>{<br>int i = 1<br>printf("%d %d %d\n", i++, i++, i);<br>return 0;<br>}</p>
+<p id="p29"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p30">2 1 3 - using g++ 4.2.1 on Linux.i686<br>
+1 2 3 - using SunStudio C++ 5.9 on Linux.i686<br>
+2 1 3 - using g++ 4.2.1 on SunOS.x86pc</br>
+1 2 3 - using SunStudio C++ 5.9 on SunOS.x86pc</br>
+1 2 3 - using g++ 4.2.1 on SunOS.sun4u</br>
+1 2 3 - using SunStudio C++ 5.9 on SunOS.sun4u</p>
+<p id="p31">Which compiler is right?<br>The answer to all such questions is C standard. In all such cases we need to see what C standard says about such programs</p>
+<h4 id="p32">What is C standard?</h4>
+<p id="p33">The latest C standard is ISO/IEC 9899:2011, also known as C11 as the final draft was published in 2011. Before C11, there was C99. The C11 final draft is available here. See this for complete history of C standards</p>
+<h4 id="p34">Can we know behavior of all programs from C standard?</h4>
+<p id="p35">C standard leaves some behavior of many C constructs as undefined and some as unspecified to simplify the specification and allow some flexibility in implementation. For example, in C the use of any automatic variable before it has been initialized yields undefined behavior and order of evaluations of subexpressions is unspecified. This specifically frees the compiler to do whatever is easiest or most efficient, should such a program be submitted.</p>
+<h4 id="p36">So what is the conclusion about above two examples?</h4>
+<p id="p37">Let us consider the first example which is ''void main() {}'', the standard says following about prototype of main().</p>
+<p id="p38">The function called at program startup is named main. The implementation 
+declares no prototype for this function. It shall be defined with a return 
+type of int and with no parameters:<br>
+       int main(void) { /* ... */ }
+or with two parameters (referred to here as argc and argv, though any names 
+may be used, as they are local to the function in which they are declared):<br>
+       int main(int argc, char *argv[]) { /* ... */ }
+or equivalent;10) or in some other implementation-defined manner.</p>
+<p id="p39">So the return type void doesn't follow the standard and it's something allowed by certain compilers.<br>
+Let us talk about second example. Note the following statement in C standard is listed under unspecified behavior.</p>
+<p id="p40">The order in which the function designator, arguments, and 
+subexpressions within the arguments are evaluated in a function 
+call (6.5.2.2).</p>
+<h4 id="p41">What to do with programs whose behavior is undefined or unspecified in standard?</h4>
+<p id="p42">As a programmer, it is never a good idea to use programming constructs whose behaviour is undefined or unspecified, such programs should always be discouraged. The output of such programs may change with compiler and/or machine.</p>
+<h1 id="p43">Is it fine to write ''void main()'' or ''main()'' in C/C++?</h1>
+<p id="p44">The definition<br><br>void main() { /* ... */ }<br><br>is not and never has been C++, nor has it even been C. See the ISO C++ standard 3.6.1[2] or the ISO C standard 5.1.2.2.1. A conforming implementation accepts<br><br>int main() { /* ... */ }<br><br><br>and<br>int main(int argc, char* argv[]) { /* ... */ }<br><br><br>A conforming implementation may provide more versions of main(), but they must all have return type int. The int returned by main() is a way for a program to return a value to ''the system'' that invokes it. On systems that doesn’t provide such a facility the return value is ignored, but that doesn't make ''void main()'' legal C++ or legal C. Even if your compiler accepts ''void main()'' avoid it, or risk being considered ignorant by C and C++ programmers.<br>In C++, main() need not contain an explicit return statement. In that case, the value returned is 0, meaning successful execution. For example:<br><br>#include ''iostream''<br>int main()<br>
+{<br>std::cout << "This program returns the integer value 0\n";<br>}<br><br><br>Note also that neither ISO C++ nor C99 allows you to leave the type out of a declaration. That is, in contrast to C89 and ARM C++ ,''int'' is not assumed where a type is missing in a declaration. Consequently:<br><br>#include ''iostream''<br>main() { /* ... */ }<br><br>is an error because the return type of main() is missing.<br><br>To summarize above, it is never a good idea to use ''void main()'' or just ''main()'' as it doesn't confirm standards. It may be allowed by some compilers though.</p>
+<p id="p45"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p46"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p47"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p48"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p49"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<h3 id="p50">Difference between ''int main()'' and ''int main(void)'' in C/C++?</h3>
+<p id="p51">Consider the following two definitions of main().<br>int main()<br>{<br>/*  */<br>return 0;<br>}<br><br>and<br>
+<br>int main(void)<br>{<br>/*  */<br>return 0;<br>}<br>What is the difference?<br>In C++, there is no difference, both are same.<br>Both definitions work in C also, but the second definition with void is considered technically better as it clearly specifies that main can only be called without any parameter<br>.In C, if a function signature doesn't specify any argument, it means that the function can be called with any number of parameters or without any parameters. For example, try to compile and run following two C programs (remember to save your files as .c). Note the difference between two signatures of fun().<br>// Program 1 (Compiles and runs fine in C, but not in C++)<br>void fun()<br> {  }<br>int main(void)<br>{<br>fun(10, "GfG", "GQ");<br>return 0;<br>}<br><br>The above program compiles and runs fine (See this), but the following program fails in compilation (see this)<br><br>// Program 2 (Fails in compilation in both C and C++)<br><br>void fun(void) {  }<br>int main(void)<br>{<br>fun(10, "GfG", "GQ");<br>return 0;<br>}<br>Unlike C, in C++, both of the above programs fails in compilation. In C++, both fun() and fun(void) are same.<br>
+So the difference is, in C, int main() can be called with any number of arguments, but int main(void) can only be called without any argument. Although it doesn't make any difference most of the times, using ''int main(void)'' is a recommended practice in C.<br><br>Exercise:<br>Predict the output of following C programs.<br><br>
+Question 1<br>
+#include ''stdio.h''<br>
+int main()<br>
+{<br>
+    static int i = 5;<br>
+    if (--i)<br>{<br>
+        printf("%d ", i);<br>
+        main(10);<br>
+    }<br>
+}<br><br>
+Question 2<br><br>
+#include ''stdio.h''<br>
+int main(void)<br>
+{<br>
+    static int i = 5;<br>
+    if (--i)<br>{<br>
+        printf("%d ", i);<br>
+        main(10);<br>
+    }<br>
+}<br>
+<p id="p52"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p53"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p54"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p55"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p56"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+<p id="p57"><a href="https://www.codechef.com/ide">Run on IDE</a></p>
+</p>
+</div>
+		<ul id="head2" >
+		<li><a id="a2" href=c.html>C Language Introduction</a></li>
+		<hr>
+		<li><a id="a2" href="c.html">C Programming Language Standard</a></li>
+		<hr>
+		<li><a id="a2" href="c.html">void main() or main()</a></li>
+		<hr>
+		<li><a id="a2" href="c.html">int main() and int main(void)</a></li>
+		<hr>
+		<li><a id="a2" href="#">Compiling a C program</a></li>
+		<hr>
+		<li><a id="a2" href="#">Variables and Keywords in C</a></li>
+		<hr>
+		<li><a id="a2" href="#">Variables Scope – Static or Dynamic?</a>
+		<hr>
+		<li><a id="a2" href="#">Scope rules</a>
+		<hr>
+		<li><a id="a2" href="#">Complicated declarations</a></li>
+		<hr>
+        <li><a id="a2" href="#">What's Data Type</a></li>
+        <hr>
+        <li><a id="a2" href="#">Use of bool</a></li>
+        <hr>
+        <li><a id="a2" href="#">Integer Promotions</a></li>
+        <hr>       
+        <li><a id="a2" href="#">Comparison of a float with a value</a></li>
+        <hr>
+        <li><a id="a2" href="#">What's storage class</a></li>
+        <hr>
+        <li><a id="a2" href="#">Static Variables</a></li>
+        <hr>
+        <li><a id="a2" href="#">Understanding extern keyword</a></li>
+        <hr>
+        <li><a id="a2" href="#">Default values of static variables</a></li>
+        <hr>
+        <li><a id="a2" href="#">Understanding 'volatile' qualifier</a></li>
+        <hr>
+        <li><a id="a2" href="#">Understanding 'register' qualifier</a></li>
+        <hr>
+        <li><a id="a2" href="#">Return values of printf() and scanf()</a></li>
+        <hr>
+        <li><a id="a2" href="#">Return type of getchar(), fgetc() and getc()</a></li>
+        <hr>
+        <li><a id="a2" href="#">Scansets in C</a></li>
+        <hr>
+        <li><a id="a2" href="#">difference in printf, sprintf and fprintf</a></li>
+        <hr>
+        <li><a id="a2" href="#">print % using printf()</a></li>
+        <hr>
+        <li><a id="a2" href="#">Arithmetic Operators</a></li>
+        <hr>
+        <li><a id="a2" href="#">Relational and Logical Operators</a></li>
+        <hr>
+        <li><a id="a2" href="#">Bitwise Operators</a></li>
+        <hr>
+        <li><a id="a2" href="#">Operator Precedence and Associativity</a></li>
+        <hr>
+        <li><a id="a2" href="#">Evaluation order of operands</a></li>
+        <hr>
+        <li><a id="a2" href="#">All about Comma</a></li>
+        <hr>
+        <li><a id="a2" href="#">sizeof() operator</a></li>
+        <hr>
+        <li><a id="a2" href="#">macro PRINT(x) which prints x</a></li>
+        <hr>
+        <li><a id="a2" href="#">Variable length arguments for Macros</a></li>
+        <hr>
+        <li><a id="a2" href="#">Multiline macros</a></li>
+        <hr>
+        <li><a id="a2" href="#">print a variable name</a></li>
+        <hr>
+        <li><a id="a2" href="#">Arrays & Strings Introduction & Properties</a></li>
+        <hr>
+        <li><a id="a2" href="#">Why not to use sizeof for array params</a></li>
+        <hr>
+        <li><a id="a2" href="#">Initialization of variables sized arrays</a></li>
+        <hr>
+        <li><a id="a2" href="#">Multidimensional arrays</a></li>
+        <hr>
+        <li><a id="a2" href="#">Storage for Strings</a></li>
+        <hr>
+        <li><a id="a2" href="#">Variable Length Arrays</a></li>
+        <hr>
+        <li><a id="a2" href="#">Control Statements 'for' versus 'while'</a></li>
+        <hr>
+        <li><a id="a2" href="#">Nested loop</a></li>
+        <hr>
+        <li><a id="a2" href="#">'switch' statement</a></li>
+        <hr>
+        <li><a id="a2" href="#">Functions Introduction & Importance</a></li>
+        <hr>
+        <li><a id="a2" href="#">Functions executed before & after main()</a></li>
+        <hr>
+        <li><a id="a2" href="#">Evaluation order of function parameters</a></li>
+        <hr>
+        <li><a id="a2" href="#">Static functions</a></li>
+        <hr>
+        <li><a id="a2" href="#">Return multiple values from a function</a></li>
+        <hr>
+        <li><a id="a2" href="#">Pointers Introduction</a></li>
+        <hr>
+        <li><a id="a2" href="#">Pointer to Pointer</a></li>
+        <hr>
+        <li><a id="a2" href="#">Dangling, Void , Null and Wild Pointers</a></li>
+        <hr>
+        <li><a id="a2" href="#">Function Pointer</a></li>
+        <hr>
+        <li><a id="a2" href="#">Enum, Structure, Union</a></li>
+        <hr>
+        <li><a id="a2" href="#">struct hack</a></li>
+        <hr>
+        <li><a id="a2" href="#">struct member Alignment, Padding and Data Packing</a></li>
+        <hr>
+        <li><a id="a2" href="#">Bit Fields</a></li>
+        <hr>
+        <li><a id="a2" href="#">Memory Layout of C program</a></li>
+        <hr>
+        <li><a id="a2" href="#">calloc() versus malloc()</a></li>
+        <hr>
+        <li><a id="a2" href="#">Memory Leak & How to avoid</a></li>
+        <hr>
+        <li><a id="a2" href="#">Deallocate without free()</a></li>
+        <hr>
+        <li><a id="a2" href="#">File Handling fseek() vs rewind()</a></li>
+        <hr>
+        <li><a id="a2" href="#">EOF, getc() and feof()</a></li>
+        <hr>
+        <li><a id="a2" href="#">fopen() for an existing file in write mode</a></li>
+        <hr>
+	</ul>
+	</body>
+</head>
+</html>
